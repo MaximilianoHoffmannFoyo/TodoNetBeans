@@ -1,5 +1,5 @@
 
-package com.mycompany.tareaclase5d;
+package tareaclase5d;
 
 import java.util.Objects;
 

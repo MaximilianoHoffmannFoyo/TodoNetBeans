@@ -4,6 +4,7 @@ package tareaclase5d;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /*
 Aplica lo estudiado para realizar una nueva clase llamada Ejercito, 
@@ -18,12 +19,12 @@ Debe haber métodos para:
 4. Sacar todos los soldados, en forma de ArrayList.
 5. Desmatricular a un soldado del ejército.
  */
-public class Ejercito {
+public class EjercitoOrdenado {
     
     private Set<Soldado> listasoldados;
 
-    public Ejercito() {
-        this.listasoldados = new HashSet<>();
+    public EjercitoOrdenado() {
+        this.listasoldados = new TreeSet<>();
     }
     
     public int numeroSoldados(){

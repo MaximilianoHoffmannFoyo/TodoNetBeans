@@ -3,7 +3,7 @@ package tareaclase5d;
 
 /*Crea una clase de prueba para tu clase Ejército, donde se hagan uso de los métodos anteriores.
  */
-public class PruebaEjercito {
+public class PruebaEjercitoOrdenado {
 
     public static void main(String[] args) {
         Soldado s1 = new Soldado("12345678S", "Jorge", "Lopez", "Arteño", 22);
@@ -11,7 +11,7 @@ public class PruebaEjercito {
         Soldado s3 = new Soldado("12376679A", "Kevin", "Cast", "Gapo", 22);
         Soldado s4 = new Soldado("16737679G", "Pepe", "Guerra", "Añejo", 22);
         
-        Ejercito e1 = new Ejercito();
+        EjercitoOrdenado e1 = new EjercitoOrdenado();
         
         System.out.println("tiene soldados:"+e1.tieneSoldados());
         System.out.println("numero soldados:"+e1.numeroSoldados());
