@@ -14,19 +14,37 @@ La aplicación debe ofrecer al usuario la posibilidad de consultar por número d
 décimo el premio obtenido.
  */
 public class LoteriaNacional {
-    
+
     private Map<String, String> loteria;
 
     public LoteriaNacional() {
         this.loteria = new HashMap<>();
     }
-    
-    public void rellenarPremios(int numeroPremios){
+
+    public void rellenarPremios(int numeroPremios) {
         Random alet = new Random();
         for (int i = 0; i < numeroPremios; i++) {
-            String n = alet.nextInt(10)+""+alet.nextInt(10)+""+alet.nextInt(10)+""+alet.nextInt(10)+""+alet.nextInt(10);
-            String p = alet.nextInt(10000)+1+"€";
+            String n = alet.nextInt(10) + "" + alet.nextInt(10) + "" + alet.nextInt(10) + "" + alet.nextInt(10) + "" + alet.nextInt(10);
+            String p = alet.nextInt(10000) + 1 + "€";
             loteria.put(n, p);
         }
     }
+
+    public void mostrarContenido() {
+        for (String key : loteria.keySet()) {
+            System.out.printf("%s -- %s %n", key, loteria.get(key));
+        }
+    }
+
+    public void consultarboleto(String n) {
+        if (loteria.containsKey(n)) {
+            System.out.println("Has ganado: " + loteria.get(n));
+        } else {
+            System.out.println("No has ganado nada");
+        }
+    }
+
+//    public void prueba() {
+//        loteria.put("11111", "5€");
+//    }
 }

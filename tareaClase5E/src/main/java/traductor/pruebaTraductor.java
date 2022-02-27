@@ -4,7 +4,7 @@ package traductor;
 Realiza una clase conteniendo el main() y 10 registros en tu traductor. 
 Prueba los métodos realizados.
  */
-public class pruebaTraductor {
+public class PruebaTraductor {
 
     public static void main(String[] args) {
         Traductor tra = new Traductor();
