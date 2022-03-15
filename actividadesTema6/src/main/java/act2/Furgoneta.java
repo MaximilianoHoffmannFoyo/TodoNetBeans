@@ -7,6 +7,7 @@ public class Furgoneta extends Vehiculo {
     private String tamanioMaletero;
 
     public Furgoneta(int puertas, boolean marchaAutomatica, String tamanioMaletero) {
+        super();
         this.puertas = puertas;
         this.marchaAutomatica = marchaAutomatica;
         this.tamanioMaletero = tamanioMaletero;
