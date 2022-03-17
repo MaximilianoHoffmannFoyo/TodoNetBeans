@@ -17,7 +17,7 @@ public class Main {
         Cliente c4 = new Cliente("Kenny","9254325E",17);
         Cliente c5 = new Cliente("Kenny","9254325E",17);
         
-        
+        System.out.println("HashCodes:");
         System.out.println(c1.hashCode());
         System.out.println(c2.hashCode());
         System.out.println(c3.hashCode());
@@ -35,7 +35,10 @@ public class Main {
         //simétrica
         System.out.println("\nsimétrica");
         System.out.println(c3.equals(c5));
+        System.out.println(c5.equals(c3));
         //nula
+        System.out.println("\nnula");
+        System.out.println(c2.equals(null));
     }
     
 }
