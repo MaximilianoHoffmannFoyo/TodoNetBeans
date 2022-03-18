@@ -10,6 +10,7 @@ public class Moneda extends Azar{
     public Moneda() {
     }
     
+    @Override
     public int lanzar(){
         Random r = new Random();
         return r.nextInt(2)+1;

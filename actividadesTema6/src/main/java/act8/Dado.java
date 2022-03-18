@@ -10,6 +10,7 @@ public class Dado extends Azar{
     public Dado() {
     }
     
+    @Override
     public int lanzar(){
         Random r = new Random();
         return r.nextInt(6)+1;

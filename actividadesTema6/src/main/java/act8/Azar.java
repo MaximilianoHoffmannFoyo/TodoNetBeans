@@ -15,4 +15,10 @@ public abstract class Azar {
 
     public abstract int lanzar();
     
+    public static void main(String[] args) {
+        Moneda n = new Moneda();
+        Dado d = new Dado();
+        System.out.println(n.lanzar());
+        System.out.println(d.lanzar());
+    }
 }
