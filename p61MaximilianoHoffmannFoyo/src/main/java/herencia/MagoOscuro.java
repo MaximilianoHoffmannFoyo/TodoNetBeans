@@ -32,20 +32,14 @@ public class MagoOscuro extends Mago {//oscuro de magia negra no del color de pi
 
     @Override
     public int hashCode() {
-        int hash = 7;
+        int hash = super.hashCode();
         hash = 17 * hash + (int) (Double.doubleToLongBits(this.tamanioSombrero) ^ (Double.doubleToLongBits(this.tamanioSombrero) >>> 32));
         return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
+        if(!super.equals(obj)){
             return false;
         }
         final MagoOscuro other = (MagoOscuro) obj;
