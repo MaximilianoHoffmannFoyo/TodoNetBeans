@@ -3,7 +3,7 @@ package hospital;
 import java.util.ArrayList;
 
 public class Hospital {
-    
+
     public String nombre;
     public String direccion;
     public int numeroCamas;
@@ -60,14 +60,12 @@ public class Hospital {
     public void setEmpleados(ArrayList<Empleado> empleados) {
         this.empleados = empleados;
     }
-    
-    
-    
-    public void contratarEmpleado(Empleado emp){
+
+    public void contratarEmpleado(Empleado emp) {
         this.empleados.add(emp);
     }
-    
-    public void ingresarPaciente(Paciente paciente){
+
+    public void ingresarPaciente(Paciente paciente) {
         this.pacientes.add(paciente);
     }
 }

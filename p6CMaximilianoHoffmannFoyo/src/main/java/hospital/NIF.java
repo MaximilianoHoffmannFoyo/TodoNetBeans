@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class NIF {
-    
+
     private String numero;
     private char letra;
     private LocalDate fechaCaducidad;
@@ -42,17 +42,17 @@ public class NIF {
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
-    
-    private char calcularLetra(){
+
+    private char calcularLetra() {
         int numeroBueno = Integer.parseInt(numero);
         int resto = numeroBueno % 23;
-        char[] letras = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
-        
+        char[] letras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+
         return letras[resto];
-        
+
     }
-    
-    public void renovar(LocalDate fechaSolicitudRenovacion){
+
+    public void renovar(LocalDate fechaSolicitudRenovacion) {
         this.fechaCaducidad = fechaSolicitudRenovacion.plus(10, ChronoUnit.YEARS);
     }
 }

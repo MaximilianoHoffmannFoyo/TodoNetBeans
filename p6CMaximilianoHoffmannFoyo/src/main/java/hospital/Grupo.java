@@ -1,11 +1,11 @@
 package hospital;
 
 public enum Grupo {
-    
+
     C(17.5),
     D(18),
     E(18.5);
-    
+
     private final double irpf;
 
     private Grupo(double irpf) {
@@ -15,6 +15,5 @@ public enum Grupo {
     public double getIrpf() {
         return irpf;
     }
-    
-    
+
 }

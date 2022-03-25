@@ -2,8 +2,8 @@ package hospital;
 
 import java.util.Random;
 
-public class Paciente extends Persona{
-    
+public class Paciente extends Persona {
+
     private String numeroHistoria;
 
     public Paciente() {
@@ -21,13 +21,13 @@ public class Paciente extends Persona{
     public void setNumeroHistoria(String numeroHistoria) {
         this.numeroHistoria = numeroHistoria;
     }
-    
-    
-    public void tomarMedicina(String medicina){
-        if(new Random().nextBoolean()){
-            System.out.println("El paciente "+this.getNombre()+" "+this.getApellidos()+" se ha curado al tomar "+medicina); 
-        }else{
-            System.out.println("El paciente "+this.getNombre()+" "+this.getApellidos()+" ha empeorado al tomar "+medicina); 
+
+    public void tomarMedicina(String medicina) {
+        if (new Random().nextBoolean()) {
+            System.out.println("El paciente " + this.getNombre() + " " + this.getApellidos() + " se ha curado al tomar " + medicina);
+        } else {
+            System.out.println("El paciente " + this.getNombre() + " " + this.getApellidos() + " ha empeorado al tomar " + medicina);
         }
     }
+
 }

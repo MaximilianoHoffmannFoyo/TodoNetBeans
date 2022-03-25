@@ -1,7 +1,7 @@
 package hospital;
 
-public class Medico extends Empleado{
-    
+public class Medico extends Empleado {
+
     public String especialidad;
 
     public Medico() {
@@ -19,18 +19,16 @@ public class Medico extends Empleado{
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-    
-    
-    
-    public void tratar(Paciente paciente, String medicina){
-        System.out.println("El medico "+this.getNombre()+" a tratado al paciente "+paciente+" con "+medicina);
+
+    public void tratar(Paciente paciente, String medicina) {
+        System.out.println("El medico " + this.getNombre() + " a tratado al paciente " + paciente.getNombre() + " " + paciente.getApellidos() + " con " + medicina);
     }
-    
-    public double calcularIRPF(){
-        if(this.especialidad.equals("cirugía")){
-            return this.getSalario()*1.25;
-        }else{
-            return this.getSalario()*1.235;
+
+    public double calcularIRPF() {
+        if (this.especialidad.equals("cirugía")) {
+            return this.getSalario() * 1.25;
+        } else {
+            return this.getSalario() * 1.235;
         }
     }
 }

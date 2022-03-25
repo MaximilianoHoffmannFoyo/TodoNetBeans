@@ -1,7 +1,7 @@
 package hospital;
 
-public abstract class Empleado extends Persona{
-    
+public abstract class Empleado extends Persona {
+
     private String numeroSeguridadSocial;
     private double salario;
 
@@ -29,10 +29,7 @@ public abstract class Empleado extends Persona{
     public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
         this.numeroSeguridadSocial = numeroSeguridadSocial;
     }
-    
-    
+
     public abstract double calcularIRPF();
-    
-    
-    
+
 }

@@ -3,7 +3,7 @@ package hospital;
 import java.time.LocalDate;
 
 public abstract class Persona {
-    
+
     private String nombre;
     private String apellidos;
     private NIF nif;
@@ -40,9 +40,8 @@ public abstract class Persona {
     public void setNif(NIF nif) {
         this.nif = nif;
     }
-    
-    
-    public void renovarNIF(LocalDate fechaSolicitud){
+
+    public final void renovarNIF(LocalDate fechaSolicitud) {
         this.nif.renovar(fechaSolicitud);
     }
 }
