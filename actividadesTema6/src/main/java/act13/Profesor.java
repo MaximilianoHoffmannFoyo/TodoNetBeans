@@ -7,9 +7,9 @@ public class Profesor extends Persona {
     public Profesor() {
     }
 
-    public Profesor(String id, String nombre, String apellidos, String nif, Direccion direccion) {
+    public Profesor(String especialidad, String nombre, String apellidos, String nif, Direccion direccion) {
         super(nombre, apellidos, nif, direccion);
-        this.especialidad = id;
+        this.especialidad = especialidad;
     }
 
     public String getEspecialidad() {
