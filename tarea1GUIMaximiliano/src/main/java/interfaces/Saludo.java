@@ -7,7 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.border.TitledBorder;
 
 public class Saludo extends JPanel {
 
@@ -43,22 +42,24 @@ public class Saludo extends JPanel {
         this.add(texto);
     }
 
-    public static void main(String[] args) {
-        // Construimos la ventana
-        JFrame frame = new JFrame("App");
-        // La ventana no se puede redimensionar
-        frame.setResizable(false);
-        // Posición de la ventana
-        frame.setLocationRelativeTo(null);
-        // Incluimos el panel en la ventana
-//        frame.add(new PanelSaludo());
-        // Ajusta el frame al contenido
-        frame.pack();
-        // Hacemos visible la ventana
-        frame.setVisible(true);
-        //Acción por defecto al pulsar el botón de cierre de la ventana
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    }
+//Probamos el panel anterior, usando un JFrame (puedes crear una nueva clase o usar el de la clase Test):
 
+public static void main(String[] args) {
+    	// Construimos la ventana
+    	JFrame frame = new JFrame("App");
+	// La ventana no se puede redimensionar
+	frame.setResizable(false);
+	// Posición de la ventana
+    	frame.setLocationRelativeTo(null);
+	// Incluimos el panel en la ventana
+    	frame.add(new PanelSaludo());
+       // Ajusta el frame al contenido
+       frame.pack();
+	// Hacemos visible la ventana
+    	frame.setVisible(true);
+	//Acción por defecto al pulsar el botón de cierre de la ventana
+    	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
 }

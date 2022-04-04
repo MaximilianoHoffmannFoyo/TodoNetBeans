@@ -47,17 +47,17 @@ public class Main {
     
     static Map numeroPasajerosLleganDestino(ArrayList<Vuelo> listaVuelos){
         Map<String, ArrayList> pasajeros = new HashMap<>();
-        for (Vuelo listaVuelo : listaVuelos) {
-            if (pasajeros.containsKey(listaVuelo.getCiudadDestino())){
+        for (Vuelo vuelo : listaVuelos) {
+            if (listaVuelos.containsKey(vuelo.getCiudadDestino())){
                 
-                for (int i = 0; i < listaVuelo.getListaPasajeros().size(); i++) {
-                    pasajeros.get(listaVuelo.getCiudadDestino()).add(
-                            (listaVuelo.getListaPasajeros().get(i)));
+                for (int i = 0; i < vuelo.getListaPasajeros().size(); i++) {
+                    pasajeros.get(vuelo.getCiudadDestino()).add(
+                            (vuelo.getListaPasajeros().get(i)));
                 }
     
                                 
             }else{
-                pasajeros.put(listaVuelo.getCiudadDestino(),listaVuelo.getListaPasajeros());                
+                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros());                
             }
         }
         return pasajeros;
