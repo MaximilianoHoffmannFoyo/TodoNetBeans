@@ -48,20 +48,21 @@ public class Main {
     static Map numeroPasajerosLleganDestino(ArrayList<Vuelo> listaVuelos){
         Map<String, ArrayList> pasajeros = new HashMap<>();
         for (Vuelo vuelo : listaVuelos) {
-            if (listaVuelos.containsKey(vuelo.getCiudadDestino())){
-                
-                for (int i = 0; i < vuelo.getListaPasajeros().size(); i++) {
-                    pasajeros.get(vuelo.getCiudadDestino()).add(
-                            (vuelo.getListaPasajeros().get(i)));
-                }
-    
-                                
-            }else{
+//            if (pasajeros.containsKey(vuelo.getCiudadDestino())){
+//                
+//                for (int i = 0; i < vuelo.getListaPasajeros().size(); i++) {
+//                    pasajeros.get(vuelo.getCiudadDestino()).add(
+//                            (vuelo.getListaPasajeros().get(i)));
+//                }
+//    
+//                                
+//            }else{
                 pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros());                
-            }
+//            }
         }
         return pasajeros;
     }
+    //no he sido capaz de añadir mas pasajeros si los vuelos se repiten 
     
     static SortedMap numeroPasajerosLleganDestinoOrdenado(ArrayList<Vuelo> listaVuelos){
         SortedMap<String, ArrayList> pasajeros = new TreeMap<>();

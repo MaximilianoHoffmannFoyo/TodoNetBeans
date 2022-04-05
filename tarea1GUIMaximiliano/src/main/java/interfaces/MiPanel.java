@@ -1,7 +1,6 @@
 package interfaces;
 
 import java.awt.Color;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -33,25 +32,4 @@ public class MiPanel extends JPanel {
     public JLabel getEtiqueta() {
             return etiqueta;
     }
-
-
-    public static void main(String[] args) {
-
-        // Construimos la ventana
-        JFrame ventanaPrincipal = new JFrame("Aplicación");
-
-        // Establecemos tamaño y posición
-        ventanaPrincipal.setSize(800, 600);
-        ventanaPrincipal.setLocationRelativeTo(null);
-
-        // Añadimos un objeto MiPanel al JFrame
-        ventanaPrincipal.add(new MiPanel(Color.cyan));
-
-        // Hacemos visible la ventana
-        ventanaPrincipal.setVisible(true);
-
-        // Acción por defecto al pulsar el botón de cierre de la ventana
-        ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
 }
