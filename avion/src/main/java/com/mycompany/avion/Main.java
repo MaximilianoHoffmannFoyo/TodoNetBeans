@@ -33,41 +33,60 @@ public class Main {
         listaVuelos.add(new Vuelo("4", "Madrid", "Roma", 10, lp3));
        
         System.out.println("No ordenado");
-        Map<String, ArrayList> pasajeros = numeroPasajerosLleganDestino(listaVuelos);
+        Map<String, Integer> pasajeros = numeroPasajerosLleganDestino(listaVuelos);
         for (String key : pasajeros.keySet()) {
-            System.out.println("Clave: "+key+" Pasajeros: "+pasajeros.get(key).size());
+            System.out.println("Clave: "+key+" Pasajeros: "+pasajeros.get(key));
         }
         System.out.println("\nOrdenado");
-        SortedMap<String, ArrayList> pasajerosOrdenados = numeroPasajerosLleganDestinoOrdenado(listaVuelos);
+        SortedMap<String, Integer> pasajerosOrdenados = numeroPasajerosLleganDestinoOrdenado(listaVuelos);
         for (String key : pasajerosOrdenados.keySet()) {
-            System.out.println("Clave: "+key+" Pasajeros: "+pasajerosOrdenados.get(key).size());
+            System.out.println("Clave: "+key+" Pasajeros: "+pasajerosOrdenados.get(key));
         }
         
+        System.out.println("\nCodigo vuelo con Arrary de pasajeros");
+        Map<String, ArrayList> pasajerosPorCodigoVuelo = PasajerosLleganDestino(listaVuelos);
+        for (String key : pasajerosPorCodigoVuelo.keySet()) {
+            System.out.println("Codigo: "+key+" Pasajeros: "+pasajerosPorCodigoVuelo.get(key));
+        }
     }
+//Método que devuelve un map donde para cada ciudad de destino se indique el 
+//número de pasajeros que vuelan a ese destino, de entre todos los vuelos.
     
     static Map numeroPasajerosLleganDestino(ArrayList<Vuelo> listaVuelos){
-        Map<String, ArrayList> pasajeros = new HashMap<>();
+        Map<String, Integer> pasajeros = new HashMap<>();
         for (Vuelo vuelo : listaVuelos) {
-//            if (pasajeros.containsKey(vuelo.getCiudadDestino())){
-//                
-//                for (int i = 0; i < vuelo.getListaPasajeros().size(); i++) {
-//                    pasajeros.get(vuelo.getCiudadDestino()).add(
-//                            (vuelo.getListaPasajeros().get(i)));
-//                }
-//    
-//                                
-//            }else{
-                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros());                
-//            }
+            if (pasajeros.containsKey(vuelo.getCiudadDestino())){
+                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros().size()
+                        +pasajeros.get(vuelo.getCiudadDestino()));
+            }else{
+                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros().size());                
+            }
         }
         return pasajeros;
     }
-    //no he sido capaz de añadir mas pasajeros si los vuelos se repiten 
     
+//Método que devuelva la misma información que el anterior pero garantizando que 
+//las ciudades contenidas en el map están ordenadas alfabéticamente.
     static SortedMap numeroPasajerosLleganDestinoOrdenado(ArrayList<Vuelo> listaVuelos){
-        SortedMap<String, ArrayList> pasajeros = new TreeMap<>();
+        SortedMap<String, Integer> pasajeros = new TreeMap<>();
+        for (Vuelo vuelo : listaVuelos) {
+            if (pasajeros.containsKey(vuelo.getCiudadDestino())){
+                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros().size()
+                        +pasajeros.get(vuelo.getCiudadDestino()));
+            }else{
+                pasajeros.put(vuelo.getCiudadDestino(),vuelo.getListaPasajeros().size());                
+            }
+        }
+        return pasajeros;
+    }
+    
+//Método que genere un map donde a partir del código de vuelo se puedan 
+//obtener todos los pasajeros de ese vuelo.
+    
+    static Map PasajerosLleganDestino(ArrayList<Vuelo> listaVuelos){
+        Map<String, ArrayList> pasajeros = new HashMap<>();
         for (Vuelo listaVuelo : listaVuelos) {
-            pasajeros.put(listaVuelo.getCiudadDestino(),listaVuelo.getListaPasajeros());
+            pasajeros.put(listaVuelo.getCodigo(),listaVuelo.getListaPasajeros());
         }
         return pasajeros;
     }
