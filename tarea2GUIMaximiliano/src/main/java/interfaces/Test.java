@@ -14,7 +14,7 @@ public class Test {
         // Incluimos el panel en la ventana
         frame.add(new Saludo());
         // Ajusta el frame al contenido
-//        frame.pack();
+        frame.pack();
         // Hacemos visible la ventana
         frame.setVisible(true);
         //Acción por defecto al pulsar el botón de cierre de la ventana
