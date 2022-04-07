@@ -6,7 +6,7 @@ public class Test {
 
     public static void main(String[] args) {
         // Construimos la ventana
-        JFrame frame = new JFrame("App");
+        JFrame frame = new JFrame("Datos");
         // La ventana no se puede redimensionar
         frame.setResizable(false);
         // Posición de la ventana
