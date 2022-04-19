@@ -1,4 +1,4 @@
-package act2;
+package vehiculo;
 
 public class Turismo extends Vehiculo {
     
@@ -20,6 +20,11 @@ public class Turismo extends Vehiculo {
     public String getAtributos(){
         String g = super.getAtributos();
         return g +" "+ this.puertas +" "+ this.marchaAutomatica;
+    }
+
+    @Override
+    public String toString() {
+        return "Turismo{" + "puertas=" + puertas + ", marchaAutomatica=" + marchaAutomatica + '}';
     }
     
     

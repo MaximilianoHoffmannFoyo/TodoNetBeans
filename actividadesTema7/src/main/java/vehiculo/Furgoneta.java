@@ -1,4 +1,4 @@
-package act2;
+package vehiculo;
 
 public class Furgoneta extends Vehiculo {
     
@@ -11,6 +11,11 @@ public class Furgoneta extends Vehiculo {
         this.puertas = puertas;
         this.marchaAutomatica = marchaAutomatica;
         this.tamanioMaletero = tamanioMaletero;
+    }
+
+    @Override
+    public String toString() {
+        return "Furgoneta{" + "puertas=" + puertas + ", marchaAutomatica=" + marchaAutomatica + ", tamanioMaletero=" + tamanioMaletero + '}';
     }
     
     

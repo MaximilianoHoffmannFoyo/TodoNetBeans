@@ -1,4 +1,4 @@
-package act2;
+package vehiculo;
 
 public class Deportivo extends Vehiculo{
     
@@ -14,6 +14,11 @@ public class Deportivo extends Vehiculo{
     }
     
     public void pruevaDeportivo(){}
+
+    @Override
+    public String toString() {
+        return "Deportivo{" + "puertas=" + puertas + ", marchaAutomatica=" + marchaAutomatica + ", techo=" + techo + '}';
+    }
     
     
 }

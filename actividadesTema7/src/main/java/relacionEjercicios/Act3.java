@@ -24,36 +24,34 @@ public class Act3 {
         Random random = new Random();
         String idfichero = "letrasAct3.txt";
 
-        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
+        for (int i = 0; i < 3; i++) {
 
-            for (int i = 0; i < 75; i++) {
-                String letraRandom = letras[random.nextInt(27)];
-                
-                do{
-                // Usamos metodo write() para escribir en el buffer
-                if (letraRandom.equals("g")) {
-                    flujo.write("g");
-                } else if (letraRandom.equals("G")) {
-                    flujo.write("G");
-                } else {
-                    if (random.nextBoolean()) {
-                        flujo.write(letraRandom + ";");
+            try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
+                int j = 0;
+//            do{    
+                boolean fraseDePaso = true;
+                do {
+                    String letra = letras[random.nextInt(26)];
+
+                    if (letra.equals("g")) {
+                        fraseDePaso = false;
+                        flujo.write(letra);
+                        flujo.newLine();
                     } else {
-                        flujo.write(letraRandom.toUpperCase() + ";");
+                        if (random.nextBoolean()) {
+                            flujo.write(letra + ";");
+                        } else {
+                            flujo.write(letra.toUpperCase() + ";");
+                        }
                     }
-                }
-                }while();
-
-                // Metodo newLine() añade línea en blanco
-                flujo.newLine();
-                // Metodo flush() guarda cambios en disco 
-                flujo.flush();
+                    flujo.flush();
+                } while (fraseDePaso);
+                j++;
+//            }while(!(j==2));    
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
-
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
         }
-
     }
 
 }

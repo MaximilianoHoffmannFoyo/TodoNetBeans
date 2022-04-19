@@ -1,0 +1,31 @@
+0 – Turismo{puertas=4, marchaAutomatica=false}
+1 – Turismo{puertas=4, marchaAutomatica=false}
+2 – Turismo{puertas=4, marchaAutomatica=false}
+3 – Turismo{puertas=4, marchaAutomatica=false}
+4 – Turismo{puertas=4, marchaAutomatica=false}
+5 – Turismo{puertas=4, marchaAutomatica=false}
+6 – Turismo{puertas=4, marchaAutomatica=false}
+7 – Turismo{puertas=4, marchaAutomatica=false}
+8 – Turismo{puertas=4, marchaAutomatica=false}
+9 – Turismo{puertas=4, marchaAutomatica=false}
+10 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+11 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+12 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+13 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+14 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+15 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+16 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+17 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+18 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+19 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
+20 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
+21 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Estandar}
+22 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
+23 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Estandar}
+24 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Grande}
+25 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
+26 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Estandar}
+27 – Furgoneta{puertas=2, marchaAutomatica=false, tamanioMaletero=Pequeño}
+28 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
+29 – Furgoneta{puertas=7, marchaAutomatica=false, tamanioMaletero=Enorme}
+	

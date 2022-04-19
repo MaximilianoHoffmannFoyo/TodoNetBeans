@@ -1,5 +1,5 @@
 
-package act2;
+package vehiculo;
 
 public class PruebaHerencia {
 

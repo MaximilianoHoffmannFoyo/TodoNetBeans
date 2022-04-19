@@ -1,4 +1,4 @@
-package act2;
+package vehiculo;
 
 import java.util.Random;
 
