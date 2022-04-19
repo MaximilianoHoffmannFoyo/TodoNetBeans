@@ -25,7 +25,7 @@ public class Act1 {
             aux -= m[i].length;
         }
     }
-    
+
     public static void main(String args[]) {
 
         // Fichero a crear. Ruta relativa a la carpeta raíz del proyecto
@@ -38,7 +38,6 @@ public class Act1 {
         System.out.println("¿Y de cuantas columnas?");
         int columnas = entradaTeclado.nextInt();
 
-        
         // Construccion de la matriz a escribir
         int[][] matriz = new int[filas][columnas];
         rellenarMatriz(matriz);
@@ -52,7 +51,7 @@ public class Act1 {
                     // Usamos metodo write() para escribir en el buffer
                     flujo.write(matriz1[j] + "\t");
                 }
-                 // Metodo newLine() añade línea en blanco
+                // Metodo newLine() añade línea en blanco
                 flujo.newLine();
             }
 
