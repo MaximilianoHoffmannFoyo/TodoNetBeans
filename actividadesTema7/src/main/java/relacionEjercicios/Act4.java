@@ -27,7 +27,6 @@ Ejemplos de líneas, los campos no tienen porqué coincidir con los de tus clase
 
         // Fichero a crear. Ruta relativa a la carpeta raíz del proyecto
         String idfichero = "vehiculosAct4.txt";
-        int i = -1;
         
         Turismo T1 = new Turismo(4,false, "6574nb", "totota", "F3", "gris", 4.3);
         Turismo T2 = new Turismo(4,false, "4h567", "pecari", "R3", "rojo", 4.3);
@@ -72,10 +71,9 @@ Ejemplos de líneas, los campos no tienen porqué coincidir con los de tus clase
 
             
             for (Vehiculo v : lista) {
-                i++;
                 
                 // Usamos metodo write() para escribir en el buffer
-                flujo.write(i+" – " + v.toString());
+                flujo.write(v.toString());
                 
                 // Metodo newLine() añade línea en blanco
                 flujo.newLine();

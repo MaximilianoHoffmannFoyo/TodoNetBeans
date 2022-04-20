@@ -2,7 +2,9 @@ package relacionEjercicios;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import vehiculo.*;
 
 public class Act7 {
 
@@ -20,8 +22,8 @@ public class Act7 {
         // Variables para guardar los datos que se van leyendo
         String[] tokens;
         String linea;
-        int suma = 0;
 
+        ArrayList<Vehiculo> lista = new ArrayList<>();
         System.out.println("Leyendo el fichero: " + idFichero);
 
         // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
@@ -32,14 +34,15 @@ public class Act7 {
             while (datosFichero.hasNextLine()) {
                 // Guarda la línea completa en un String
                 linea = datosFichero.nextLine();
+                System.out.println(linea);
                 // Se guarda en el array de String cada elemento de la
                 // línea en función del carácter separador de campos del fichero CSV
-                tokens = linea.split("\t");
+                tokens = linea.split(":");
+                System.out.println("");
                 for (String string : tokens) {
-                    suma += Integer.parseInt(string);
+                    System.out.print(string+"\t");
                 }
             }
-            System.out.println("La suma de todos los numeros es: "+ suma);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }

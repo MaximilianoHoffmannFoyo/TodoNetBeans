@@ -17,7 +17,7 @@ public class Deportivo extends Vehiculo{
 
     @Override
     public String toString() {
-        return super.toString()+", " + puertas + ", " + marchaAutomatica + ", " + techo;
+        return "1 - "+super.toString()+":" + puertas + ":" + marchaAutomatica + ":" + techo;
     }
     
     

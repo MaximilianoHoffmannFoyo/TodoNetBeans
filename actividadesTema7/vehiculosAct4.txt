@@ -1,30 +1,30 @@
-0 – totota, F3, gris, 4, false
-1 – pecari, R3, rojo, 4, false
-2 – totota, 4G, azul, 4, false
-3 – totota, 7L, naranja, 4, false
-4 – yamata, J4, gris claro, 4, false
-5 – pecari, F5, celeste, 4, false
-6 – totota, F3, rosa, 4, false
-7 – yamata, F7, negro, 4, false
-8 – pecari, F12, morado, 4, false
-9 – yamata, 00, magenta, 4, false
-10 – Panda, Alt, gris, 3, true, true
-11 – Pande, Alt, gris, 3, true, true
-12 – Pandi, Alt, gris, 3, true, true
-13 – Pando, Alt, gris, 3, true, true
-14 – Pandu, Alt, gris, 3, true, true
-15 – Pandas, Alt, gris, 3, true, true
-16 – Pandfac, Alt, gris, 3, true, true
-17 – Pandack, Alt, gris, 3, true, true
-18 – Pandag, Alt, gris, 3, true, true
-19 – Pandita, Alt, gris, 3, true, true
-20 – jeep, grande, negro, 5, false, Grande
-21 – tesla, grande, negro, 3, false, Estandar
-22 – jeep, hueco, naranja, 5, false, Grande
-23 – ford, cuadrado, magenta, 3, false, Estandar
-24 – ford, cuadrado, magenta, 3, false, Grande
-25 – audi, golf, negro, 5, false, Grande
-26 – audi, golf, magenta, 5, false, Estandar
-27 – ford, grande, negro, 2, false, Pequeño
-28 – tesla, todo incluido, magenta, 5, false, Grande
-29 – renolt, todo incluido, naranja, 7, false, Enorme
+0 - totota:F3:gris:4:false
+0 - pecari:R3:rojo:4:false
+0 - totota:4G:azul:4:false
+0 - totota:7L:naranja:4:false
+0 - yamata:J4:gris claro:4:false
+0 - pecari:F5:celeste:4:false
+0 - totota:F3:rosa:4:false
+0 - yamata:F7:negro:4:false
+0 - pecari:F12:morado:4:false
+0 - yamata:00:magenta:4:false
+1 - Panda:Alt:gris:3:true:true
+1 - Pande:Alt:gris:3:true:true
+1 - Pandi:Alt:gris:3:true:true
+1 - Pando:Alt:gris:3:true:true
+1 - Pandu:Alt:gris:3:true:true
+1 - Pandas:Alt:gris:3:true:true
+1 - Pandfac:Alt:gris:3:true:true
+1 - Pandack:Alt:gris:3:true:true
+1 - Pandag:Alt:gris:3:true:true
+1 - Pandita:Alt:gris:3:true:true
+2 - renolt:hueco:naranja:5:false:Grande
+2 - audi:golf:negro:3:false:Estandar
+2 - audi:cuadrado:naranja:5:false:Grande
+2 - tesla:grande:magenta:3:false:Estandar
+2 - tesla:grande:negro:3:false:Grande
+2 - audi:cuadrado:negro:5:false:Grande
+2 - tesla:grande:negro:5:false:Estandar
+2 - tesla:grande:naranja:2:false:Peque�o
+2 - jeep:hueco:celeste:5:false:Grande
+2 - renolt:todo incluido:celeste:7:false:Enorme

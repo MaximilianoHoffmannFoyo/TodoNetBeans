@@ -98,7 +98,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return marca + ", " + modelo + ", " + color;
+        return marca + ":" + modelo + ":" + color;
     }
 
     public String getAtributos(){
