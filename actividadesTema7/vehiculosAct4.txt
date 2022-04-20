@@ -1,31 +1,30 @@
-0 – Turismo{puertas=4, marchaAutomatica=false}
-1 – Turismo{puertas=4, marchaAutomatica=false}
-2 – Turismo{puertas=4, marchaAutomatica=false}
-3 – Turismo{puertas=4, marchaAutomatica=false}
-4 – Turismo{puertas=4, marchaAutomatica=false}
-5 – Turismo{puertas=4, marchaAutomatica=false}
-6 – Turismo{puertas=4, marchaAutomatica=false}
-7 – Turismo{puertas=4, marchaAutomatica=false}
-8 – Turismo{puertas=4, marchaAutomatica=false}
-9 – Turismo{puertas=4, marchaAutomatica=false}
-10 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-11 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-12 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-13 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-14 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-15 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-16 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-17 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-18 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-19 – Deportivo{puertas=3, marchaAutomatica=true, techo=true}
-20 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
-21 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Estandar}
-22 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
-23 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Estandar}
-24 – Furgoneta{puertas=3, marchaAutomatica=false, tamanioMaletero=Grande}
-25 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
-26 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Estandar}
-27 – Furgoneta{puertas=2, marchaAutomatica=false, tamanioMaletero=Pequeño}
-28 – Furgoneta{puertas=5, marchaAutomatica=false, tamanioMaletero=Grande}
-29 – Furgoneta{puertas=7, marchaAutomatica=false, tamanioMaletero=Enorme}
-	
+0 â€“ totota, F3, gris, 4, false
+1 â€“ pecari, R3, rojo, 4, false
+2 â€“ totota, 4G, azul, 4, false
+3 â€“ totota, 7L, naranja, 4, false
+4 â€“ yamata, J4, gris claro, 4, false
+5 â€“ pecari, F5, celeste, 4, false
+6 â€“ totota, F3, rosa, 4, false
+7 â€“ yamata, F7, negro, 4, false
+8 â€“ pecari, F12, morado, 4, false
+9 â€“ yamata, 00, magenta, 4, false
+10 â€“ Panda, Alt, gris, 3, true, true
+11 â€“ Pande, Alt, gris, 3, true, true
+12 â€“ Pandi, Alt, gris, 3, true, true
+13 â€“ Pando, Alt, gris, 3, true, true
+14 â€“ Pandu, Alt, gris, 3, true, true
+15 â€“ Pandas, Alt, gris, 3, true, true
+16 â€“ Pandfac, Alt, gris, 3, true, true
+17 â€“ Pandack, Alt, gris, 3, true, true
+18 â€“ Pandag, Alt, gris, 3, true, true
+19 â€“ Pandita, Alt, gris, 3, true, true
+20 â€“ jeep, grande, negro, 5, false, Grande
+21 â€“ tesla, grande, negro, 3, false, Estandar
+22 â€“ jeep, hueco, naranja, 5, false, Grande
+23 â€“ ford, cuadrado, magenta, 3, false, Estandar
+24 â€“ ford, cuadrado, magenta, 3, false, Grande
+25 â€“ audi, golf, negro, 5, false, Grande
+26 â€“ audi, golf, magenta, 5, false, Estandar
+27 â€“ ford, grande, negro, 2, false, PequeÃ±o
+28 â€“ tesla, todo incluido, magenta, 5, false, Grande
+29 â€“ renolt, todo incluido, naranja, 7, false, Enorme

@@ -15,7 +15,7 @@ public class Furgoneta extends Vehiculo {
 
     @Override
     public String toString() {
-        return "Furgoneta{" + "puertas=" + puertas + ", marchaAutomatica=" + marchaAutomatica + ", tamanioMaletero=" + tamanioMaletero + '}';
+        return super.toString()+", " + puertas + ", " + marchaAutomatica + ", " + tamanioMaletero ;
     }
     
     

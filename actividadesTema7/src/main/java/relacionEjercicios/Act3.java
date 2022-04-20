@@ -24,18 +24,21 @@ public class Act3 {
         Random random = new Random();
         String idfichero = "letrasAct3.txt";
 
-        for (int i = 0; i < 3; i++) {
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
+            int j = 0;
 
-            try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
-                int j = 0;
-//            do{    
+            for (int i = 0; i < 75; i++) {
                 boolean fraseDePaso = true;
                 do {
                     String letra = letras[random.nextInt(26)];
 
                     if (letra.equals("g")) {
                         fraseDePaso = false;
-                        flujo.write(letra);
+                        if (random.nextBoolean()) {
+                            flujo.write(letra);
+                        } else {
+                            flujo.write(letra.toUpperCase());
+                        }
                         flujo.newLine();
                     } else {
                         if (random.nextBoolean()) {
@@ -46,11 +49,10 @@ public class Act3 {
                     }
                     flujo.flush();
                 } while (fraseDePaso);
-                j++;
-//            }while(!(j==2));    
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
             }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
         }
     }
 
