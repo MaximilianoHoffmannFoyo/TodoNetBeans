@@ -16,7 +16,6 @@ public class Vehiculo {
     private String marca;
     private String modelo;
     private String color;
-    private double tarifa;
     private boolean disponible;
     
     
@@ -24,20 +23,20 @@ public class Vehiculo {
     private static String [] modelos = {"golf","grande","cuadrado","hueco","todo incluido"};
     private static String [] colores = {"celeste","naranja","negro","blanco","magenta"};
     
-    public Vehiculo() {
-        Random aleatorio = new Random();
-        this.color = colores[aleatorio.nextInt(colores.length)];
-        this.marca = marcas[aleatorio.nextInt(marcas.length)];
-        this.modelo = modelos[aleatorio.nextInt(modelos.length)];
-    }
+//    public Vehiculo() {
+//        Random aleatorio = new Random();
+//        this.color = colores[aleatorio.nextInt(colores.length)];
+//        this.marca = marcas[aleatorio.nextInt(marcas.length)];
+//        this.modelo = modelos[aleatorio.nextInt(modelos.length)];
+//    }
     
-    public static Vehiculo [] generar100VehiculosAleatoriamente(){
-        Vehiculo [] coches = new Vehiculo[100];
-        for (int i = 0; i < 100; i++) {
-            coches[i] = new Vehiculo();
-        }
-        return coches;
-    }
+//    public static Vehiculo [] generar100VehiculosAleatoriamente(){
+//        Vehiculo [] coches = new Vehiculo[100];
+//        for (int i = 0; i < 100; i++) {
+//            coches[i] = new Vehiculo();
+//        }
+//        return coches;
+//    }
     public static void mostrar100Vehiculos(Vehiculo [] coches){
         for (int i = 0; i < 100; i++) {
             System.out.println(coches[i].toString());
@@ -46,12 +45,11 @@ public class Vehiculo {
     
     // el método constructor de la clase Vehiculo 
     public Vehiculo(String matricula,
-            String marca, String modelo, String color, double tarifa) {
+            String marca, String modelo, String color) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
-        this.tarifa = tarifa;
         this.disponible = false;
     }
 // los métodos ‘get’ y ‘set’ de la clase Vehiculo 
@@ -72,16 +70,8 @@ public class Vehiculo {
         return this.color;
     }
 
-    public double getTarifa() {
-        return this.tarifa;
-    }
-
     public boolean getDisponible() {
         return this.disponible;
-    }
-
-    public void setTarifa(double tarifa) {
-        this.tarifa = tarifa;
     }
 
     public void setDisponible(boolean disponible) {
@@ -92,17 +82,13 @@ public class Vehiculo {
         this.matricula = matricula;
     }
 
-    public void aplicarDescuentoTarifa(double descuento) {
-        this.tarifa -= descuento;
-    }
-
     @Override
     public String toString() {
-        return marca + ":" + modelo + ":" + color;
+        return matricula +":"+ marca +":"+ modelo +":"+ color +":"+ disponible;
     }
 
     public String getAtributos(){
-        return matricula +" "+ marca +" "+ modelo +" "+ color +" "+ tarifa +" "+ disponible;
+        return matricula +":"+ marca +":"+ modelo +":"+ color +":"+ disponible;
     }
     
 }

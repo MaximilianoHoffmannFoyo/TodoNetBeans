@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Act1 {
 
     public static void rellenarMatriz(int[][] m) {
-        int aux = 1;
+        int aux = 0;
         for (int i = 0; i < m.length; i++) {
             aux += 100;
             for (int j = 0; j < m[i].length; j++) {

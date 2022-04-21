@@ -6,8 +6,9 @@ public class Furgoneta extends Vehiculo {
     private boolean marchaAutomatica;
     private String tamanioMaletero;
 
-    public Furgoneta(int puertas, boolean marchaAutomatica, String tamanioMaletero) {
-        super();
+    public Furgoneta(String matricula, String marca, String modelo, String color,
+            int puertas, boolean marchaAutomatica, String tamanioMaletero) {
+        super(matricula, marca, modelo, color);
         this.puertas = puertas;
         this.marchaAutomatica = marchaAutomatica;
         this.tamanioMaletero = tamanioMaletero;

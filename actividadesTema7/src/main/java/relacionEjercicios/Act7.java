@@ -24,7 +24,6 @@ public class Act7 {
         String linea;
 
         ArrayList<Vehiculo> lista = new ArrayList<>();
-        System.out.println("Leyendo el fichero: " + idFichero);
 
         // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
         // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
@@ -34,15 +33,28 @@ public class Act7 {
             while (datosFichero.hasNextLine()) {
                 // Guarda la línea completa en un String
                 linea = datosFichero.nextLine();
-                System.out.println(linea);
+                linea = linea.replace("0 - ", "0:");
+                linea = linea.replace("1 - ", "1:");
+                linea = linea.replace("2 - ", "2:");
                 // Se guarda en el array de String cada elemento de la
                 // línea en función del carácter separador de campos del fichero CSV
                 tokens = linea.split(":");
-                System.out.println("");
-                for (String string : tokens) {
-                    System.out.print(string+"\t");
-                }
+                    if (tokens[0].equals("0")) {
+                        lista.add(new Turismo(tokens[1], tokens[2], tokens[3], tokens[4], 
+                                Integer.parseInt(tokens[6]), Boolean.valueOf(tokens[7])));
+                    }else if (tokens[0].equals("1")) {
+                        lista.add(new Deportivo(tokens[1], tokens[2], tokens[3], tokens[4], 
+                                Integer.parseInt(tokens[6]), Boolean.valueOf(tokens[7]),
+                                Boolean.valueOf(tokens[8])));
+                    }else if (tokens[0].equals("2")) {
+                        lista.add(new Furgoneta(tokens[1], tokens[2], tokens[3], tokens[4], 
+                                Integer.parseInt(tokens[6]), Boolean.valueOf(tokens[7]),
+                                tokens[8]));
+                    }
             }
+            for (Vehiculo v : lista) {
+            System.out.println(v.toString());
+        } 
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
