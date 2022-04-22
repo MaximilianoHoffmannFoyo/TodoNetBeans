@@ -1,8 +1,12 @@
 package lecturaYEscrituraDeFicheros;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
@@ -24,7 +28,7 @@ public class Main {
         // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
         // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
         // las operaciones con el archivo
-        try (Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
+        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
             datosFichero.nextLine();
             // hasNextLine devuelve true mientras haya líneas por leer
             while (datosFichero.hasNextLine()) {
@@ -50,16 +54,44 @@ public class Main {
         }
 
         //MOSTRAR DATOS
-            //Lista optenida del fichero
+        //Lista optenida del fichero
         for (Empleado v : lista) {
             System.out.println(v.toString());
         }
-            //Total de profesores
-        System.out.println("El total de profesores se de: "+lista.size());
+        //Total de profesores
+        System.out.println("\nEl total de profesores se de: " + lista.size() + "\n");
+        //Mostrar map
+        Main.mostrarContenidoMap(map(lista));
+        //Guardar map en archivo .csv
+        escribirMapEnFicheroCSV("profesoresPorDepartamento.csv", map(lista));
         
+        Main.guardarElOtroFichero("trabajoMasDe100DiasCurso20-21.csv", lista);
+        
+        //PROBANDO CLASE UTILS
+        System.out.println("\n\n Pruebas clase Utils");
+        System.out.print("Lincoln Romero, Guillermo: ");
+        System.out.println((Utils.estaEmpleadoNombre("Lincoln Romero, Guillermo", lista))?"Presente":"Ausente");
+        System.out.print("jkagshdgadaaggklñklgfdpo: ");
+        System.out.println((Utils.estaEmpleadoNombre("jkagshdgadaaggklñklgfdpo", lista))?"Presente":"Ausente");
 
+        System.out.println("\n\n");
+        System.out.println("Para el departamento: Biología y Geología P.E.S., hay "
+                +Utils.numeroEmpleadosCordinadores("Biología y Geología P.E.S.", lista)+" cordinadores");
+        
+        System.out.println("\n\n");
+        System.out.println("Empleados que tienen P en su DNI:");
+        for (String s : Utils.optenerListaConLetraDNI('P', lista)) {
+            System.out.println(s);
+        }
+        
+        System.out.println("\n\n");
+        System.out.println("Empleados cuya toma de posesión coincida con 2020-09-16: ");
+        for (String s : Utils.optenerListaDNIConFechaDeToma(LocalDate.of(2020, Month.SEPTEMBER, 16), lista)) {
+            System.out.println(s);
+        }
     }
 
+    //METODOS
     public static LocalDate convertirEnLocalDate(String fechaString) {
         LocalDate fecha;
         if (!fechaString.isBlank()) {
@@ -73,10 +105,77 @@ public class Main {
         return fecha;
     }
 
-    public static void map(ArrayList<Empleado> l){
-        Map<String, Empleado> mapa = new TreeMap<>();
-//        for (Empleado e : l) {
-//            mapa.put(e.getPuesto(), value);            
-//        }
+    //Convertir Arraylist en Map
+    public static Map<String, Integer> map(ArrayList<Empleado> l) {
+        Map<String, Integer> mapa = new TreeMap<>();
+        int numero = 0;
+        for (Empleado e : l) {
+            mapa.put(e.getPuesto(), 0);
+        }
+        for (Empleado e : l) {
+            mapa.replace(e.getPuesto(), mapa.get(e.getPuesto()) + 1);
+        }
+        return mapa;
+    }
+
+    public static void mostrarContenidoMap(Map<String, Integer> mapa) {
+        for (String key : mapa.keySet()) {
+            System.out.printf("%s -- %s %n", key, mapa.get(key));
+        }
+    }
+
+    public static void escribirMapEnFicheroCSV(String idfichero, Map<String, Integer> mapa) {
+
+        // Estructura try-with-resources. Instancia el objeto con el fichero a escribir
+        // y se encarga de cerrar el recurso "flujo" una vez finalizadas las operaciones
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
+
+            for (String key : mapa.keySet()) {
+                // Usamos metodo write() para escribir en el buffer
+                flujo.write(key + "\t" + mapa.get(key));
+
+                // Metodo newLine() añade línea en blanco
+                flujo.newLine();
+            }
+
+            // Metodo flush() guarda cambios en disco 
+            flujo.flush();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    public static void guardarElOtroFichero(String idfichero, ArrayList<Empleado> l) {
+
+        // Estructura try-with-resources. Instancia el objeto con el fichero a escribir
+        // y se encarga de cerrar el recurso "flujo" una vez finalizadas las operaciones
+        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idfichero))) {
+
+            for (Empleado empleado : l) {
+                if (empleado.getFechaDeToma().isAfter(LocalDate.of(2020, Month.SEPTEMBER, 10))
+                        && empleado.getFechaDeToma().isBefore(LocalDate.of(2021, Month.JUNE, 24))) {
+                    if (empleado.getFechaDeToma().plusDays(100).isBefore(empleado.getFechaDeCese())) {
+                        if (empleado.getFechaDeToma().plusDays(100)
+                                .isBefore(LocalDate.of(2021, Month.JUNE, 24))) {
+                            // Usamos metodo write() para escribir en el buffer
+                            flujo.write(empleado.getNombre()+";"+empleado.getDni()+";"+empleado.getPuesto()
+                                +";"+empleado.getFechaDeToma()+";"+empleado.getFechaDeCese()+";"+empleado.getTeléfono()
+                                +";"+empleado.isEvaluador()+";"+empleado.isCoordinador());
+                            // Metodo newLine() añade línea en blanco
+                            flujo.newLine();
+                        }
+                    }
+                }
+            }
+
+            // Metodo flush() guarda cambios en disco 
+            flujo.flush();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
