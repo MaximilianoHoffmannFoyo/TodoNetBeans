@@ -1,5 +1,6 @@
 package vehiculo;
 
+import java.util.Objects;
 import java.util.Random;
 
 /*
@@ -90,5 +91,43 @@ public class Vehiculo {
     public String getAtributos(){
         return matricula +":"+ marca +":"+ modelo +":"+ color +":"+ disponible;
     }
+
+//    @Override
+//    public int hashCode() {
+//        int hash = 7;
+//        hash = 19 * hash + Objects.hashCode(this.matricula);
+//        hash = 19 * hash + Objects.hashCode(this.marca);
+//        hash = 19 * hash + Objects.hashCode(this.modelo);
+//        hash = 19 * hash + Objects.hashCode(this.color);
+//        hash = 19 * hash + (this.disponible ? 1 : 0);
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Vehiculo other = (Vehiculo) obj;
+//        if (this.disponible != other.disponible) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.matricula, other.matricula)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.marca, other.marca)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.modelo, other.modelo)) {
+//            return false;
+//        }
+//        return Objects.equals(this.color, other.color);
+//    }
     
 }
