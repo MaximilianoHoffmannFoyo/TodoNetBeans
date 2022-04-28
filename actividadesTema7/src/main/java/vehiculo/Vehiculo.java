@@ -75,6 +75,30 @@ public class Vehiculo {
         return this.disponible;
     }
 
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public static void setMarcas(String[] marcas) {
+        Vehiculo.marcas = marcas;
+    }
+
+    public static void setModelos(String[] modelos) {
+        Vehiculo.modelos = modelos;
+    }
+
+    public static void setColores(String[] colores) {
+        Vehiculo.colores = colores;
+    }
+
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }

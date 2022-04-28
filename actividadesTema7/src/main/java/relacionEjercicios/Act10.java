@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 import vehiculo.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /*10.- Implementa un programa para leer los ficheros de texto del ejercicio anterior, 
 de forma que se guarden en una única lista de Vehículos los objetos leídos de cada fichero. 
@@ -20,6 +25,7 @@ Ordena la lista por bastidor.
 Imprimir la lista ordenada.
 Borrar los ficheros *.csv originales.
 Mostrar el contenido de la carpeta donde estaban los *.csv originales.
+
 Usando Streams, realiza las siguientes acciones sobre la lista de vehículos:
 Imprime por pantalla todos los coches blancos, distintos, ordenador por matrícula.
 Imprime por pantalla todas las marcas de coches distintas de aquellos coches que estén disponibles.
@@ -45,22 +51,54 @@ public class Act10 {
         listaCompleta.addAll(llenarArrayConCSV("copias/Furgoneta.csv", "Furgoneta"));
         /*Imprimir la lista por pantalla. */
         System.out.println("\n\nImprimir la lista por pantalla");
-        for (Vehiculo vehiculo : listaCompleta) {
+        listaCompleta.forEach(vehiculo -> {
             System.out.println(vehiculo.toString());
-        }
+        });
         /*Ordena la lista por bastidor.*/
         Collections.sort(listaCompleta, (Vehiculo v1, Vehiculo v2) -> v1.getMatricula().compareTo(v2.getMatricula()));
         /*Imprimir la lista ordenada.*/
         System.out.println("\n\nImprimir la lista ordenada");
-        for (Vehiculo vehiculo : listaCompleta) {
+        listaCompleta.forEach(vehiculo -> {
             System.out.println(vehiculo.toString());
-        }
+        });
         /*Borrar los ficheros *.csv originales.*/
         borrarElemento("act9/Turismos.csv");
         borrarElemento("act9/Deportivos.csv");
         borrarElemento("act9/Furgoneta.csv");
         /*Mostrar el contenido de la carpeta donde estaban los *.csv originales.*/
         listarDirectorio("act9");
+
+        System.out.println("\n\nAcciones con streams");//---------------------------------------------
+        System.out.println(
+                "Imprime por pantalla todos los coches blancos, distintos, ordenador por matrícula.");
+        listaCompleta.stream()
+                .filter((v) -> v.getColor().equalsIgnoreCase("blanco"))
+                .distinct()
+                .sorted((v1, v2) -> v1.getMatricula().compareTo(v2.getMatricula()))
+                .forEach(System.out::println);
+        System.out.println(
+                "\nImprime por pantalla todas las marcas de coches distintas de aquellos coches que estén disponibles.");
+        for (Vehiculo vehiculo : listaCompleta) {
+            Random r = new Random();
+            if (r.nextBoolean()) {
+                vehiculo.setDisponible(true);
+            }
+        }
+        listaCompleta.stream()
+                .filter((v) -> v.getDisponible())
+                .forEach(System.out::println);
+        System.out.println(
+                "\nSaber la cantidad de vehículos Citroen.");
+        System.out.println("Número de citroen: "+listaCompleta.stream()
+                .filter((v) -> v.getMarca().equalsIgnoreCase("citroen"))
+                .count());
+        System.out.println(
+                "\nComprueba si hay algún Peugeot negro disponible en la lista.");
+        listaCompleta.get(0).setMarca("Peugeot");
+        listaCompleta.get(0).setColor("negro");
+        System.out.println(listaCompleta.stream()
+                .anyMatch((v) -> v.getMarca().equalsIgnoreCase("peugeot")&&v.getColor().equalsIgnoreCase("negro"))
+                ?"Esta disponible":"No esta disponible");
     }
 
     public static ArrayList<Vehiculo> llenarArrayConCSV(String idFichero, String tipoVehiculo) {
@@ -73,7 +111,7 @@ public class Act10 {
         // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
         // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
         // las operaciones con el archivo
-        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
+        try (Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
 
             // hasNextLine devuelve true mientras haya líneas por leer
             while (datosFichero.hasNextLine()) {
