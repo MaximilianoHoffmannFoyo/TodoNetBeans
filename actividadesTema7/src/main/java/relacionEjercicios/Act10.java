@@ -40,16 +40,16 @@ public class Act10 {
         listarDirectorio("./copias");
         /*Leer los ficheros de la carpeta “copias” e ir guardando los objetos en una lista de vehículos.*/
         ArrayList<Vehiculo> listaCompleta = new ArrayList<>();
-        listaCompleta.addAll(Act10.llenarArrayConCSVTurismo("copias/Turismos.csv"));
-        listaCompleta.addAll(Act10.llenarArrayConCSVDeportivo("copias/Deportivos.csv"));
-        listaCompleta.addAll(Act10.llenarArrayConCSVFurgoneta("copias/Furgoneta.csv"));
+        listaCompleta.addAll(llenarArrayConCSV("copias/Turismos.csv", "Turismo"));
+        listaCompleta.addAll(llenarArrayConCSV("copias/Deportivos.csv", "Deportivo"));
+        listaCompleta.addAll(llenarArrayConCSV("copias/Furgoneta.csv", "Furgoneta"));
         /*Imprimir la lista por pantalla. */
         System.out.println("\n\nImprimir la lista por pantalla");
         for (Vehiculo vehiculo : listaCompleta) {
             System.out.println(vehiculo.toString());
         }
         /*Ordena la lista por bastidor.*/
-        Collections.sort(listaCompleta,(Vehiculo v1, Vehiculo v2) -> v1.getMatricula().compareTo(v2.getMatricula()));
+        Collections.sort(listaCompleta, (Vehiculo v1, Vehiculo v2) -> v1.getMatricula().compareTo(v2.getMatricula()));
         /*Imprimir la lista ordenada.*/
         System.out.println("\n\nImprimir la lista ordenada");
         for (Vehiculo vehiculo : listaCompleta) {
@@ -63,7 +63,7 @@ public class Act10 {
         listarDirectorio("act9");
     }
 
-    public static ArrayList<Vehiculo> llenarArrayConCSVTurismo(String idFichero) {
+    public static ArrayList<Vehiculo> llenarArrayConCSV(String idFichero, String tipoVehiculo) {
         // Variables para guardar los datos que se van leyendo
         String[] tokens;
         String linea;
@@ -86,85 +86,19 @@ public class Act10 {
 //                for (String token : tokens) {
 //                    System.out.print(token + "\t");
 //                }
-                lista.add(new Turismo(tokens[0], tokens[1], tokens[2],
-                        tokens[3], Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6])));
-//                System.out.println("");
-            }
-
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
-
-//        for (Vehiculo vehiculo : lista) {
-//            System.out.println(vehiculo.toString());
-//        }
-        return lista;
-    }
-
-    public static ArrayList<Vehiculo> llenarArrayConCSVDeportivo(String idFichero) {
-        // Variables para guardar los datos que se van leyendo
-        String[] tokens;
-        String linea;
-
-        ArrayList<Vehiculo> lista = new ArrayList<>();
-
-        // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
-        // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
-        // las operaciones con el archivo
-        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
-
-            // hasNextLine devuelve true mientras haya líneas por leer
-            while (datosFichero.hasNextLine()) {
-                // Guarda la línea completa en un String
-                linea = datosFichero.nextLine();
-//                System.out.println(linea);
-                // Se guarda en el array de String cada elemento de la
-                // línea en función del carácter separador de campos del fichero CSV
-                tokens = linea.split(";");
-//                for (String token : tokens) {
-//                    System.out.print(token + "\t");
-//                }
-                lista.add(new Deportivo(tokens[0], tokens[1], tokens[2],
-                        tokens[3], Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6]),
-                        Boolean.parseBoolean(tokens[7])));
-//                System.out.println("");
-            }
-
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
-
-//        for (Vehiculo vehiculo : lista) {
-//            System.out.println(vehiculo.toString());
-//        }
-        return lista;
-    }
-
-    public static ArrayList<Vehiculo> llenarArrayConCSVFurgoneta(String idFichero) {
-        // Variables para guardar los datos que se van leyendo
-        String[] tokens;
-        String linea;
-
-        ArrayList<Vehiculo> lista = new ArrayList<>();
-
-        // Inicialización del flujo "datosFichero" en función del archivo llamado "idFichero"
-        // Estructura try-with-resources. Permite cerrar los recursos una vez finalizadas
-        // las operaciones con el archivo
-        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
-
-            // hasNextLine devuelve true mientras haya líneas por leer
-            while (datosFichero.hasNextLine()) {
-                // Guarda la línea completa en un String
-                linea = datosFichero.nextLine();
-//                System.out.println(linea);
-                // Se guarda en el array de String cada elemento de la
-                // línea en función del carácter separador de campos del fichero CSV
-                tokens = linea.split(";");
-//                for (String token : tokens) {
-//                    System.out.print(token + "\t");
-//                }
-                lista.add(new Furgoneta(tokens[0], tokens[1], tokens[2], tokens[3],
-                        Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6]), tokens[7]));
+                if (tipoVehiculo.equalsIgnoreCase("turismo")) {
+                    lista.add(new Turismo(tokens[0], tokens[1], tokens[2],
+                            tokens[3], Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6])));
+                } else if (tipoVehiculo.equalsIgnoreCase("deportivo")) {
+                    lista.add(new Deportivo(tokens[0], tokens[1], tokens[2],
+                            tokens[3], Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6]),
+                            Boolean.parseBoolean(tokens[7])));
+                } else if (tipoVehiculo.equalsIgnoreCase("furgoneta")) {
+                    lista.add(new Furgoneta(tokens[0], tokens[1], tokens[2], tokens[3],
+                            Integer.parseInt(tokens[5]), Boolean.parseBoolean(tokens[6]), tokens[7]));
+                } else {
+                    System.out.println("EL tipo de vehiculo no es correcto.");
+                }
 //                System.out.println("");
             }
 
@@ -217,7 +151,7 @@ public class Act10 {
             System.out.println(e.toString());
         }
     }
-    
+
     public static void borrarElemento(String ruta) {
         Path file = Paths.get(ruta);
         try {
