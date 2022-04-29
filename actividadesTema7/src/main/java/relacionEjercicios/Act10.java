@@ -8,11 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 import vehiculo.*;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /*10.- Implementa un programa para leer los ficheros de texto del ejercicio anterior, 
 de forma que se guarden en una única lista de Vehículos los objetos leídos de cada fichero. 
@@ -86,6 +82,8 @@ public class Act10 {
         }
         listaCompleta.stream()
                 .filter((v) -> v.getDisponible())
+                .map((v) -> v.getMarca())
+                .distinct()
                 .forEach(System.out::println);
         System.out.println(
                 "\nSaber la cantidad de vehículos Citroen.");

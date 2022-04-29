@@ -70,23 +70,23 @@ public class Main {
         //PROBANDO CLASE UTILS
         System.out.println("\n\n Pruebas clase Utils");
         System.out.print("Lincoln Romero, Guillermo: ");
-        System.out.println((Utils.estaEmpleadoNombre("Lincoln Romero, Guillermo", lista))?"Presente":"Ausente");
+        System.out.println((UtilsApiStream.estaEmpleadoNombre("Lincoln Romero, Guillermo", lista))?"Presente":"Ausente");
         System.out.print("jkagshdgadaaggklñklgfdpo: ");
-        System.out.println((Utils.estaEmpleadoNombre("jkagshdgadaaggklñklgfdpo", lista))?"Presente":"Ausente");
+        System.out.println((UtilsApiStream.estaEmpleadoNombre("jkagshdgadaaggklñklgfdpo", lista))?"Presente":"Ausente");
 
         System.out.println("\n\n");
         System.out.println("Para el departamento: Biología y Geología P.E.S., hay "
-                +Utils.numeroEmpleadosCordinadores("Biología y Geología P.E.S.", lista)+" cordinadores");
+                +UtilsApiStream.numeroEmpleadosCordinadores("Biología y Geología P.E.S.", lista)+" cordinadores");
         
         System.out.println("\n\n");
         System.out.println("Empleados que tienen P en su DNI:");
-        for (String s : Utils.optenerListaConLetraDNI('P', lista)) {
+        for (String s : UtilsApiStream.optenerListaConLetraDNI('P', lista)) {
             System.out.println(s);
         }
         
         System.out.println("\n\n");
         System.out.println("Empleados cuya toma de posesión coincida con 2020-09-16: ");
-        for (String s : Utils.optenerListaDNIConFechaDeToma(LocalDate.of(2020, Month.SEPTEMBER, 16), lista)) {
+        for (String s : UtilsApiStream.optenerListaDNIConFechaDeToma(LocalDate.of(2020, Month.SEPTEMBER, 16), lista)) {
             System.out.println(s);
         }
     }
@@ -162,7 +162,7 @@ public class Main {
                             // Usamos metodo write() para escribir en el buffer
                             flujo.write(empleado.getNombre()+";"+empleado.getDni()+";"+empleado.getPuesto()
                                 +";"+empleado.getFechaDeToma()+";"+empleado.getFechaDeCese()+";"+empleado.getTeléfono()
-                                +";"+empleado.isEvaluador()+";"+empleado.isCoordinador());
+                                +";"+empleado.getEvaluador()+";"+empleado.getCoordinador());
                             // Metodo newLine() añade línea en blanco
                             flujo.newLine();
                         }

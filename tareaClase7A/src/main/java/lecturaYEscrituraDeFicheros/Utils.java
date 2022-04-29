@@ -2,7 +2,6 @@ package lecturaYEscrituraDeFicheros;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 /*    
@@ -32,7 +31,7 @@ public class Utils {
         int contador = 0;
         for (Empleado empleado : lista) {
             if (empleado.getPuesto().equals(departamento)) {
-                if (empleado.isCoordinador().equals("Sí")) {
+                if (empleado.getCoordinador().equals("Sí")) {
                     contador++;
                 }
             }

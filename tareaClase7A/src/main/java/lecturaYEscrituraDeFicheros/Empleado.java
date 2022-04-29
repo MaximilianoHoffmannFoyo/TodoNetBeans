@@ -75,7 +75,7 @@ public class Empleado {
         this.Teléfono = Teléfono;
     }
 
-    public String isEvaluador() {
+    public String getEvaluador() {
         return Evaluador;
     }
 
@@ -83,7 +83,7 @@ public class Empleado {
         this.Evaluador = Evaluador;
     }
 
-    public String isCoordinador() {
+    public String getCoordinador() {
         return Coordinador;
     }
 
