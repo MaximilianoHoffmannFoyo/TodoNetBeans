@@ -1,0 +1,301 @@
+[ {
+  "codigo" : 1,
+  "nombre" : "app1s",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 682.6975985791248,
+  "numeroDescargas" : 40856
+}, {
+  "codigo" : 2,
+  "nombre" : "app2c",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 538.9510213703354,
+  "numeroDescargas" : 44033
+}, {
+  "codigo" : 3,
+  "nombre" : "app3j",
+  "descripcion" : "App de pago",
+  "tamanioKb" : 738.4217940505035,
+  "numeroDescargas" : 45674
+}, {
+  "codigo" : 4,
+  "nombre" : "app4g",
+  "descripcion" : "App de red social",
+  "tamanioKb" : 785.4915992857409,
+  "numeroDescargas" : 13444
+}, {
+  "codigo" : 5,
+  "nombre" : "app5n",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 299.26924160033207,
+  "numeroDescargas" : 1126
+}, {
+  "codigo" : 6,
+  "nombre" : "app6y",
+  "descripcion" : "App de banco del parque",
+  "tamanioKb" : 417.154369246389,
+  "numeroDescargas" : 47399
+}, {
+  "codigo" : 7,
+  "nombre" : "app7x",
+  "descripcion" : "App de pago",
+  "tamanioKb" : 191.5462676503329,
+  "numeroDescargas" : 12778
+}, {
+  "codigo" : 8,
+  "nombre" : "app8g",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 391.046790466748,
+  "numeroDescargas" : 21858
+}, {
+  "codigo" : 9,
+  "nombre" : "app9w",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 479.1813572108149,
+  "numeroDescargas" : 19249
+}, {
+  "codigo" : 10,
+  "nombre" : "app10g",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 236.96510652150556,
+  "numeroDescargas" : 28330
+}, {
+  "codigo" : 11,
+  "nombre" : "app11o",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 379.23796921255274,
+  "numeroDescargas" : 7539
+}, {
+  "codigo" : 12,
+  "nombre" : "app12r",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 825.1210163734416,
+  "numeroDescargas" : 44079
+}, {
+  "codigo" : 13,
+  "nombre" : "app13c",
+  "descripcion" : "App calculadora",
+  "tamanioKb" : 752.1703222568268,
+  "numeroDescargas" : 12874
+}, {
+  "codigo" : 14,
+  "nombre" : "app14i",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 429.3326252560028,
+  "numeroDescargas" : 47960
+}, {
+  "codigo" : 15,
+  "nombre" : "app15u",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 164.73739815912535,
+  "numeroDescargas" : 29170
+}, {
+  "codigo" : 16,
+  "nombre" : "app16w",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 457.32077649147215,
+  "numeroDescargas" : 26157
+}, {
+  "codigo" : 17,
+  "nombre" : "app17i",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 295.2529184171935,
+  "numeroDescargas" : 5028
+}, {
+  "codigo" : 18,
+  "nombre" : "app18d",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 166.77452743150343,
+  "numeroDescargas" : 2029
+}, {
+  "codigo" : 19,
+  "nombre" : "app19h",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 939.6609203472174,
+  "numeroDescargas" : 44431
+}, {
+  "codigo" : 20,
+  "nombre" : "app20o",
+  "descripcion" : "App de red social",
+  "tamanioKb" : 609.545348906549,
+  "numeroDescargas" : 12457
+}, {
+  "codigo" : 21,
+  "nombre" : "app21a",
+  "descripcion" : "App calculadora",
+  "tamanioKb" : 678.8608226841776,
+  "numeroDescargas" : 28884
+}, {
+  "codigo" : 22,
+  "nombre" : "app22v",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 756.0090229121068,
+  "numeroDescargas" : 15081
+}, {
+  "codigo" : 23,
+  "nombre" : "app23i",
+  "descripcion" : "App calculadora",
+  "tamanioKb" : 567.6743859846474,
+  "numeroDescargas" : 9515
+}, {
+  "codigo" : 24,
+  "nombre" : "app24z",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 941.2048502048387,
+  "numeroDescargas" : 10356
+}, {
+  "codigo" : 25,
+  "nombre" : "app25s",
+  "descripcion" : "App de pokemon",
+  "tamanioKb" : 712.1493476025272,
+  "numeroDescargas" : 16494
+}, {
+  "codigo" : 26,
+  "nombre" : "app26f",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 347.07664592336846,
+  "numeroDescargas" : 48028
+}, {
+  "codigo" : 27,
+  "nombre" : "app27k",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 205.52891316477096,
+  "numeroDescargas" : 38463
+}, {
+  "codigo" : 28,
+  "nombre" : "app28n",
+  "descripcion" : "App española",
+  "tamanioKb" : 947.9579711887342,
+  "numeroDescargas" : 31644
+}, {
+  "codigo" : 29,
+  "nombre" : "app29a",
+  "descripcion" : "App española",
+  "tamanioKb" : 898.7708758793124,
+  "numeroDescargas" : 33104
+}, {
+  "codigo" : 30,
+  "nombre" : "app30t",
+  "descripcion" : "App española",
+  "tamanioKb" : 101.95238737189965,
+  "numeroDescargas" : 29572
+}, {
+  "codigo" : 31,
+  "nombre" : "app31b",
+  "descripcion" : "App de pago",
+  "tamanioKb" : 930.1722154591905,
+  "numeroDescargas" : 24516
+}, {
+  "codigo" : 32,
+  "nombre" : "app32x",
+  "descripcion" : "App de NetBeans",
+  "tamanioKb" : 389.1100065255144,
+  "numeroDescargas" : 44454
+}, {
+  "codigo" : 33,
+  "nombre" : "app33f",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 344.3706248072242,
+  "numeroDescargas" : 3041
+}, {
+  "codigo" : 34,
+  "nombre" : "app34l",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 528.8054356429091,
+  "numeroDescargas" : 33159
+}, {
+  "codigo" : 35,
+  "nombre" : "app35q",
+  "descripcion" : "App de NetBeans",
+  "tamanioKb" : 382.6706656128068,
+  "numeroDescargas" : 25979
+}, {
+  "codigo" : 36,
+  "nombre" : "app36t",
+  "descripcion" : "App de NetBeans",
+  "tamanioKb" : 953.4909760121456,
+  "numeroDescargas" : 4736
+}, {
+  "codigo" : 37,
+  "nombre" : "app37g",
+  "descripcion" : "App de comida rapida",
+  "tamanioKb" : 143.91364731604688,
+  "numeroDescargas" : 33713
+}, {
+  "codigo" : 38,
+  "nombre" : "app38l",
+  "descripcion" : "App española",
+  "tamanioKb" : 843.9698933538352,
+  "numeroDescargas" : 2942
+}, {
+  "codigo" : 39,
+  "nombre" : "app39n",
+  "descripcion" : "App rosa",
+  "tamanioKb" : 749.6087541489329,
+  "numeroDescargas" : 38960
+}, {
+  "codigo" : 40,
+  "nombre" : "app40f",
+  "descripcion" : "App de NetBeans",
+  "tamanioKb" : 964.7295533872723,
+  "numeroDescargas" : 48614
+}, {
+  "codigo" : 41,
+  "nombre" : "app41e",
+  "descripcion" : "App de red social",
+  "tamanioKb" : 753.8773801355165,
+  "numeroDescargas" : 18309
+}, {
+  "codigo" : 42,
+  "nombre" : "app42b",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 239.75773414367356,
+  "numeroDescargas" : 28819
+}, {
+  "codigo" : 43,
+  "nombre" : "app43h",
+  "descripcion" : "App de banco del parque",
+  "tamanioKb" : 550.0616355238844,
+  "numeroDescargas" : 43002
+}, {
+  "codigo" : 44,
+  "nombre" : "app44z",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 503.10632592646334,
+  "numeroDescargas" : 20079
+}, {
+  "codigo" : 45,
+  "nombre" : "app45p",
+  "descripcion" : "App de pago",
+  "tamanioKb" : 643.8478016919836,
+  "numeroDescargas" : 46562
+}, {
+  "codigo" : 46,
+  "nombre" : "app46k",
+  "descripcion" : "App calculadora",
+  "tamanioKb" : 226.5968259294812,
+  "numeroDescargas" : 31822
+}, {
+  "codigo" : 47,
+  "nombre" : "app47e",
+  "descripcion" : "App española",
+  "tamanioKb" : 519.7209351449915,
+  "numeroDescargas" : 1033
+}, {
+  "codigo" : 48,
+  "nombre" : "app48e",
+  "descripcion" : "App española",
+  "tamanioKb" : 689.4178426344233,
+  "numeroDescargas" : 33748
+}, {
+  "codigo" : 49,
+  "nombre" : "app49v",
+  "descripcion" : "App de banco",
+  "tamanioKb" : 266.28825836473965,
+  "numeroDescargas" : 13023
+}, {
+  "codigo" : 50,
+  "nombre" : "app50i",
+  "descripcion" : "App de banco del parque",
+  "tamanioKb" : 768.4874146529595,
+  "numeroDescargas" : 20866
+} ]

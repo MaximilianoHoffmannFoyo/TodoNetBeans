@@ -1,0 +1,1 @@
+10;app10a;App de comida rapida;776.2833499584842;4384
