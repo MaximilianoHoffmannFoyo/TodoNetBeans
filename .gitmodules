@@ -1,0 +1,42 @@
+[submodule "Proyecto-Maquinas-de-Vending"]
+	path = Proyecto-Maquinas-de-Vending
+	url = https://github.com/MaximilianoHoffmannFoyo/Proyecto-Maquinas-de-Vending.git
+[submodule "conexionJDBC"]
+	path = conexionJDBC
+	url = https://github.com/jfervic933/conexionJDBC.git
+[submodule "crud_dao"]
+	path = crud_dao
+	url = https://github.com/jfervic933/crud_dao.git
+[submodule "estructuras-set-map"]
+	path = estructuras-set-map
+	url = https://github.com/jfervic933/estructuras-set-map.git
+[submodule "metodosUtiles"]
+	path = metodosUtiles
+	url = https://github.com/MaximilianoHoffmannFoyo/metodosUtiles.git
+[submodule "paresYNones"]
+	path = paresYNones
+	url = https://github.com/MaximilianoHoffmannFoyo/paresYNones.git
+[submodule "pokino"]
+	path = pokino
+	url = https://github.com/MaximilianoHoffmannFoyo/pokino.git
+[submodule "proyectoGit"]
+	path = proyectoGit
+	url = https://github.com/MaximilianoHoffmannFoyo/proyectoGit.git
+[submodule "proyectoGitClon"]
+	path = proyectoGitClon
+	url = https://github.com/MaximilianoHoffmannFoyo/proyectoGit.git
+[submodule "SterlasParadise"]
+	path = SterlasParadise
+	url = https://github.com/acutuc/SterlasParadise.git
+[submodule "relacionEjercicios3C"]
+	path = relacionEjercicios3C
+	url = https://github.com/MaximilianoHoffmannFoyo/RelacionEjercicios3C.git
+[submodule "intropoo"]
+	path = intropoo
+	url = https://github.com/MaximilianoHoffmannFoyo/intropoo.git
+[submodule "actividadesTema5"]
+	path = actividadesTema5
+	url = https://github.com/MaximilianoHoffmannFoyo/ActTema5.git
+[submodule "unidad3_2122"]
+	path = unidad3_2122
+	url = https://github.com/jfervic933/unidad3_2122.git
