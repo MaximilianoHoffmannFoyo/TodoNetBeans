@@ -1,8 +1,7 @@
-package daw.carlos.modelo;
+package modelo;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -50,7 +49,7 @@ public class AventuraDAO implements IAventura {
         ResultSet res = null;
         AventuraVO aventura = new AventuraVO();
 
-        String sql = "select * from aventura where pk=?";
+        String sql = "select * from aventura where codAventura=?";
 
         try ( PreparedStatement prest = con.prepareStatement(sql)) {
             // Preparamos la sentencia parametrizada
@@ -60,7 +59,7 @@ public class AventuraDAO implements IAventura {
             res = prest.executeQuery();
 
             // Nos posicionamos en el primer registro del Resultset. Sólo debe haber una fila
-            // si existe esa pk
+            // si existe ese codAventura
             if (res.next()) {
                 // Recogemos los datos de la aventura, guardamos en un objeto
                 aventura.setCodAventura(res.getInt("codAventura"));
@@ -78,10 +77,10 @@ public class AventuraDAO implements IAventura {
     public int insertAventura(AventuraVO aventura) throws SQLException {
 
         int numFilas = 0;
-        String sql = "insert into aventura values (?,?,?)";
+        String sql = "insert into aventura values (?,?,?,?)";
 
         if (findByCodAventura(aventura.getCodAventura()) != null) {
-            // Existe un registro con esa pk
+            // Existe un registro con ese codAventura
             // No se hace la inserción
             return numFilas;
         } else {
@@ -167,7 +166,7 @@ public class AventuraDAO implements IAventura {
                 prest.setString(1, nuevosDatos.getNombre());
                 prest.setString(2, nuevosDatos.getDificultad());
                 prest.setString(3, nuevosDatos.getDescripcion());
-                prest.setInt(3, codAventura);
+                prest.setInt(4, codAventura);
 
                 numFilas = prest.executeUpdate();
             }

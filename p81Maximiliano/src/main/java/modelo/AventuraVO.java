@@ -1,6 +1,4 @@
-package daw.carlos.modelo;
-
-import java.time.LocalDate;
+package modelo;
 
 public class AventuraVO {
 
@@ -57,5 +55,4 @@ public class AventuraVO {
         return "AventuraVO{" + "codAventura=" + codAventura + ", nombre=" + nombre + ", dificultad=" + dificultad + ", descripcion=" + descripcion + '}';
     }
 
-    
 }

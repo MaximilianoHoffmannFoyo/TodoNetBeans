@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package daw.carlos.aplicacion;
+package aplicacion;
 
-import daw.carlos.modelo.AventuraDAO;
-import daw.carlos.modelo.AventuraVO;
+import modelo.AventuraDAO;
+import modelo.AventuraVO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,35 +29,32 @@ public class Programa {
 
         try {
 
-//            System.out.println("Nº personas insertadas " + daoPersona.insertAventura(lista));
+            System.out.println("Nº personas insertadas " + daoPersona.insertAventura(lista));
             System.out.println("-----------------------------------------");
             System.out.println("Comprobamos en una nueva lista que se recogen los datos desde la tabla.");
             List<AventuraVO> nuevaLista = daoPersona.getAll();
             System.out.println("-------- Lista con datos recogidos desde la B.D -------------");
             nuevaLista.forEach(System.out::println);
             System.out.println("-----------------------------------------");
-            System.out.println("Persona con primary key 1: ");
+            System.out.println("Aventura con primary key 1: ");
             System.out.println(daoPersona.findByCodAventura(1));
             System.out.println("-----------------------------------------");
-            System.out.println("Se va a borrar la persona con pk 3");
-            System.out.println("Nº personas borradas "
+            System.out.println("Se va a borrar la aventura con codigoAventura 30");
+            System.out.println("Nº aventuras borradas "
                     + daoPersona.deleteAventura(new AventuraVO(30, "Aventura30", "medio", "descripcion30")));
             System.out.println("-----------------------------------------");
             nuevaLista = daoPersona.getAll();
-            System.out.println("-------- Lista con datos recogidos desde la B.D despues de borrar una persona -------------");
+            System.out.println("-------- Lista con datos recogidos desde la B.D despues de borrar una aventura -------------");
             nuevaLista.forEach(System.out::println);
             System.out.println("-----------------------------------------");
-            System.out.println("Modificación de la persona con pk 5");
-            System.out.println("Nº Personas modificadas "
+            System.out.println("Modificación de la aventura con codigoAventura 10");
+            System.out.println("Nº aventuras modificadas "
                     + daoPersona.updateAventura(10, new AventuraVO(70, "Aventura70", "ultraDificil", "descripcion70")));
             System.out.println("-----------------------------------------");
             nuevaLista = daoPersona.getAll();
-            System.out.println("-------- Lista con datos recogidos desde la B.D despues de modificar una persona -------------");
+            System.out.println("-------- Lista con datos recogidos desde la B.D despues de modificar una aventura -------------");
             nuevaLista.forEach(System.out::println);
             System.out.println("-----------------------------------------");
-//            System.out.println("Ejecución del procedimiento almacenado");
-//            System.out.println("Se cambia María Weston por Felipe Román");
-//            System.out.println("Nombres cambiados " + daoPersona.cambiarNombres("Felipe Román", "Maria Weston"));
             System.out.println("-----------------------------------------");
             nuevaLista = daoPersona.getAll();
             System.out.println("-------- Lista con datos recogidos desde la B.D despues de ejecutar proced. -------------");
@@ -67,8 +64,6 @@ public class Programa {
             System.out.println("No se ha podido realizar la operación:");
             System.out.println(sqle.getMessage());
         }
-        System.out.println();
-        lista.forEach(System.out::println);
 
     }
 
